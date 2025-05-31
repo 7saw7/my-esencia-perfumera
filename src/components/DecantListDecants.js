@@ -12,8 +12,9 @@ function DecantListDecants() {
     const [visibleCount, setVisibleCount] = useState(20);
 
     useEffect(() => {
-        getDecants()
-    }, [])
+  getDecants();
+}, [getDecants]);
+
 
 
     useEffect(() => {
@@ -50,10 +51,6 @@ function DecantListDecants() {
 
         setfilteredDecants(sortedDecants);
         setVisibleCount(20);
-    }
-
-    function showMorePerfumes() {
-        setVisibleCount((prevVisibleCount) => prevVisibleCount + 40);
     }
 
     function renderDecants() {
